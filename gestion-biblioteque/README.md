@@ -13,3 +13,5 @@
 - https://www.npmjs.com/package/node-usb-barcode-scanner (very good)
 
 https://github.com/node-hid/node-hid
+
+- https://npm.io/search/keyword:barcode
