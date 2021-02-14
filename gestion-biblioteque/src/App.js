@@ -3,6 +3,9 @@ import './App.css';
 import Card from './components/IdCard/Card';
 import { useState } from 'react';
 import useSetState from './components/CustomHooks/useSetState'
+import Button from '@material-ui/core/Button';
+import Bookshelf from './components/Books/Bookshelf'
+
 
 function App() {
 const [state, setstate] = useSetState({
@@ -20,9 +23,13 @@ const [state, setstate] = useSetState({
       showInputNationality: false,
       themeColor: ['#ff6347', '#4169e1', '#004D40', "#3E2723", "#212121", "#263238"]
 });
-  
+  const handleThemeClick = (theme) => {
+    const card = document.body.getElementsByClassName("id-card")[0];
+    card.style.backgroundColor = theme;
+  }
   return (
     <div className="App">
+    
      <Card
      name = {state.name} 
      dob = {state.dob}
@@ -37,6 +44,14 @@ const [state, setstate] = useSetState({
       showInputNationality = {state.showInputNationality}
 
      />
+     <div className="df">
+        {state.themeColor.map(theme=>(<div className="box m-2 circle" style={{backgroundColor: theme}} onClick={()=>handleThemeClick(theme)}></div>))}
+      </div>
+     <Button variant="contained" color="primary">
+      Hello World
+    </Button>
+
+    <Bookshelf />
     </div>
   );
 }

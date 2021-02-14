@@ -2,9 +2,35 @@
     text-align: center;
     /* for card */
     display: flex;
-    /* flex-direction: column; */
+    align-items: center;
+    flex-direction: column;
     /* for card */
 }
+
+
+/* For Card stuff */
+
+.box {
+    min-width: 50px;
+    min-height: 50px;
+    background-color: tomato;
+    cursor: pointer;
+}
+
+.box:hover {
+    opacity: .8;
+}
+
+.circle {
+    border-radius: 100px;
+}
+
+.df {
+    display: flex;
+}
+
+
+/* For Card stuff */
 
 .App-logo {
     height: 40vmin;

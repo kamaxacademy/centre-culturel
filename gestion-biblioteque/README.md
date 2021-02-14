@@ -15,3 +15,5 @@
 https://github.com/node-hid/node-hid
 
 - https://npm.io/search/keyword:barcode
+
+- https://blog.alexdevero.com/react-express-sqlite-app/
