@@ -1,0 +1,48 @@
+{
+    "name": "gestion-biblioteque",
+    "version": "0.1.0",
+    "private": true,
+    "main": "electron/main.js",
+    "dependencies": {
+        "@testing-library/jest-dom": "^5.11.4",
+        "@testing-library/react": "^11.1.0",
+        "@testing-library/user-event": "^12.1.10",
+        "electron": "^11.2.3",
+        "electron-is-dev": "^1.2.0",
+        "electron-reload": "^1.5.0",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1",
+        "react-scripts": "4.0.2",
+        "web-vitals": "^1.0.1"
+    },
+    "scripts": {
+        "start": "set BROWSER=none && react-scripts start",
+        "start-electron": "set ELECTRON_START_URL=http://localhost:3000 && electron .",
+        "build": "react-scripts build",
+        "build-electron": "mkdir build/src && robocopy electron build/electron /S & robocopy src/shared build/src/shared /S",
+        "test": "react-scripts test --env=jsdom",
+        "eject": "react-scripts eject",
+        "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
+        "lint:check": "eslint . --ext=js,jsx;  exit 0",
+        "lint:fix": "eslint . --ext=js,jsx --fix;  exit 0",
+        "build-package": "npm run build-package-css && babel src --out-dir dist"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
+}
