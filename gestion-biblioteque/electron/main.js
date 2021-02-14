@@ -5,7 +5,12 @@ require('electron-reload')
 const isDev = require('electron-is-dev')
 const url = require("url");
 // const { create } = require('domain');
-
+var multiIsbn = require("multi-isbn")
+multiIsbn.init()
+multiIsbn.find(9780156013987, function(err, data) {
+  if (err) throw err
+  console.log(JSON.stringify(data, null, 2))
+})
 
 
 let mainWindow;
