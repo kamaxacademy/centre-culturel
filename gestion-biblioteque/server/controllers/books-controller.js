@@ -1,6 +1,38 @@
 // Import database
 const knex = require('./../db')
 
+
+
+// var multiIsbn = require("multi-isbn")
+// multiIsbn.init()
+// multiIsbn.find(9780156013987, function(err, data) {
+//   if (err) throw err
+//   // console.log(JSON.stringify(data, null, 2))
+
+// //  data.map(data =>console.log(data.title))
+// console.log(data.data[0].title)
+// })
+
+// {
+//   "data": [
+//     {
+//       "title": "Le petit prince",
+//       "publisher": "Houghton Mifflin Harc
+//       "publishedDate": "2001",
+//       "language": "en",
+//       "authors": [
+//         "Antoine de Saint-Exup├⌐ry"
+//       ],
+//       "isbn10": "0156013983",
+//       "isbn13": "9780156013987"
+//     }
+//   ],
+//   "via": [
+//     "google",
+//     "multi-isbn@0.3.1"
+//   ]
+// }
+
 // Retrieve all books
 exports.booksAll = async (req, res) => {
   // Get all books from database
@@ -17,15 +49,20 @@ exports.booksAll = async (req, res) => {
     })
 }
 
-// Create new book
+// // Create new book
 exports.booksCreate = async (req, res) => {
+
+
+
   // Add new book to database
   knex('books')
     .insert({ // insert new record, a book
       'author': req.body.author,
       'title': req.body.title,
       'pubDate': req.body.pubDate,
+      'isbn': req.body.isbn,
       'rating': req.body.rating
+       
     })
     .then(() => {
       // Send a success message in response
@@ -35,7 +72,13 @@ exports.booksCreate = async (req, res) => {
       // Send a error message in response
       res.json({ message: `There was an error creating ${req.body.title} book: ${err}` })
     })
+ 
 }
+
+
+
+
+
 
 // Remove specific book
 exports.booksDelete = async (req, res) => {

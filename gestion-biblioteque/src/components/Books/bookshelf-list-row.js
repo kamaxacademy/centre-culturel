@@ -12,6 +12,7 @@ const BookshelfListRow = (props) => {
     author:'',
     title:'',
     pubDate:'',
+    isbn:'',
     rating:'',
   }
 });
@@ -20,6 +21,9 @@ const BookshelfListRow = (props) => {
     <tr className="table-row">
     <td className="table-item">
       {props.position}
+    </td>
+    <td className="table-item">
+      {props.book.isbn}
     </td>
 
     <td className="table-item">

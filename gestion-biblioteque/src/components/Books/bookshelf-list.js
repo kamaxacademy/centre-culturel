@@ -13,6 +13,7 @@ const BookshelfList = (props) => {
     author:'',
     title :'',
     pubDate :'',
+    isbn:'',
     rating :''
 })
   return (
@@ -22,6 +23,7 @@ const BookshelfList = (props) => {
         <thead>
           <tr>
             <th className="table-head-item" />
+            <th className="table-head-item">Isbn</th>
 
             <th className="table-head-item">Title</th>
 

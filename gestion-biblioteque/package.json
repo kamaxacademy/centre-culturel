@@ -12,6 +12,7 @@
         "axios": "^0.21.1",
         "body-parser": "^1.19.0",
         "compression": "^1.7.4",
+        "concurrently": "^5.3.0",
         "cors": "^2.8.5",
         "electron": "^11.2.3",
         "electron-is-dev": "^1.2.0",
@@ -20,6 +21,7 @@
         "helmet": "^4.4.1",
         "knex": "^0.21.17",
         "multi-isbn": "^0.3.1",
+        "nodemon": "^2.0.7",
         "react": "^17.0.1",
         "react-dom": "^17.0.1",
         "react-scripts": "4.0.2",
@@ -27,7 +29,9 @@
         "web-vitals": "^1.0.1"
     },
     "scripts": {
-        "start": "set BROWSER=none && react-scripts start",
+        "start": "concurrently \"npm run start-server\" \"npm run start-front\" \"npm run start-electron\" --kill-others --kill-others-on-fail",
+        "start-server": "nodemon server/server.js --watch server/*",
+        "start-front": "set BROWSER=none && react-scripts start",
         "start-electron": "set ELECTRON_START_URL=http://localhost:3000 && electron .",
         "build": "react-scripts build",
         "build-electron": "mkdir build/src && robocopy electron build/electron /S & robocopy src/shared build/src/shared /S",

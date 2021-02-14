@@ -6,7 +6,7 @@ import BookshelfList from './bookshelf-list'
 // Import components
 
 import '../../styles/bookshelf.css'
-
+var multiIsbn = require("multi-isbn")
 
 const Bookshelf = () => {
     // Prepare states
@@ -16,6 +16,9 @@ const Bookshelf = () => {
   const [rating, setRating] = useState('')
   const [books, setBooks] = useState([])
   const [loading, setLoading] = useState(true)
+  const [isbn, setIsbn] = useState('')
+// 
+ multiIsbn.init()
 
     // Fetch all books on initial render
   useEffect(() => {
@@ -47,12 +50,27 @@ const Bookshelf = () => {
 
    // Create new book
   const handleBookCreate = () => {
+
+    multiIsbn.find(isbn, function(err, data) {
+  if (err) throw err
+  // console.log(JSON.stringify(data, null, 2))
+
+        //  data.map(data =>console.log(data.title))
+        // console.log(data.data[0].title)
+        console.log(data)
+
+
     // Send POST request to 'books/create' endpoint
     axios
       .post('http://localhost:4001/books/create', {
-        author: author,
-        title: title,
-        pubDate: pubDate,
+        // author: author,
+        // title: title,
+        // pubDate: pubDate,
+        // rating: rating
+        author: data.data[0].authors[0],
+        title: data.data[0].title,
+        pubDate: data.data[0].publishedDate,
+        isbn: data.data[0].isbn13,
         rating: rating
       })
       .then(res => {
@@ -63,6 +81,8 @@ const Bookshelf = () => {
         fetchBooks()
       })
       .catch(error => console.error(`There was an error creating the ${title} book: ${error}`))
+    
+    })
   }
 
   // Submit new book
@@ -113,6 +133,11 @@ const Bookshelf = () => {
       <div className="book-list-form">
         <div className="form-wrapper" onSubmit={handleBookSubmit}>
           <div className="form-row">
+          <fieldset>
+              <label className="form-label" htmlFor="title">Enter Isbn:</label>
+              <input className="form-input" type="text" id="isbn" name="isbn" value={isbn} onChange={(e) => setIsbn(e.currentTarget.value)} />
+            </fieldset>
+
             <fieldset>
               <label className="form-label" htmlFor="title">Enter title:</label>
               <input className="form-input" type="text" id="title" name="title" value={title} onChange={(e) => setTitle(e.currentTarget.value)} />

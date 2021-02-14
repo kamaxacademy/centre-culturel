@@ -30,6 +30,7 @@ knex.schema
                   table.integer('author');
                   table.string('title');
                   table.string('pubDate');
+                  table.string('isbn')
                   table.integer('rating');
               });
               // Log success message
