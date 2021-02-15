@@ -5,7 +5,7 @@ import { useState } from 'react';
 import useSetState from './components/CustomHooks/useSetState'
 import Button from '@material-ui/core/Button';
 import Bookshelf from './components/Books/Bookshelf'
-
+import HomePage from './pages/HomePage';
 
 function App() {
 const [state, setstate] = useSetState({
@@ -14,7 +14,7 @@ const [state, setstate] = useSetState({
       dob: '04/07/1995',
       phone: '076 282 62 56',
       nationality:'INDIAN',
-      image: "./assets/images/females.jpg",
+      image: "../../assets/images/females.jpg",
       idCardNumber: "ID0001",
       showInputName: false,
       showInputEmail: false,
@@ -30,7 +30,7 @@ const [state, setstate] = useSetState({
   return (
     <div className="App">
     
-     <Card
+   <Card
      name = {state.name} 
      dob = {state.dob}
       phone={state.phone} 
@@ -52,6 +52,8 @@ const [state, setstate] = useSetState({
     </Button>
 
     <Bookshelf />
+     
+     <HomePage />
     </div>
   );
 }

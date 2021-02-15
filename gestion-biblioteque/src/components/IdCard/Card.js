@@ -38,7 +38,8 @@ const Card = (props) => {
                     </div>
                 </div>
                 <div className="card-body-right">
-                    {image? <img alt="id-card-img" src={image} style={{height: 150, width:150}}/>:<img alt="id-card-img" src={require("../../assets/images/user.png")} style={{height: 150, width:150}}/>}
+                    {image? <img alt="id-card-img" src={image} style={{height: 150, width:150}}/>:<img alt="id-card-img" src={require("../../assets/images/females.jpg")} style={{height: 150, width:150}}/>}
+                    {/* <img src={require("../../assets/images/females.jpg")} /> */}
                     <span className="text-sign">{name.split(" ")[0]}...</span>
                 </div>
             </div>
