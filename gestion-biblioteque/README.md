@@ -17,3 +17,12 @@
 - https://npm.io/search/keyword:barcode
 
 - https://blog.alexdevero.com/react-express-sqlite-app/
+
+
+Details for project
+
+- https://www.educative.io/courses/grokking-the-object-oriented-design-interview/RMlM3NgjAyR
+- https://www.scirp.org/journal/paperinformation.aspx?paperid=89410
+- https://www.researchgate.net/publication/329910340_Design_of_Library_Management_System
+- https://www.c-sharpcorner.com/UploadFile/ea3ed6/database-design-for-library-management-system/
+- 
