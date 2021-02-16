@@ -3,6 +3,16 @@ import axios from 'axios'
 import { Button } from '@material-ui/core';
 var multiIsbn = require("multi-isbn")
 
+// const isbn = require('node-isbn');
+ 
+//isbn.resolve('2090386851', function (err, book) {
+//     if (err) {
+//         console.log('Book not found', err);
+//     } else {
+//         console.log('Book found %j', book);
+//     }
+// });
+
 const BarcodeSearch = ()=>{
     const [data, setData] = useState({ hits: [] });
     const [query, setQuery] = useState('');
@@ -15,15 +25,13 @@ const BarcodeSearch = ()=>{
 
         multiIsbn.init()
         const fetchData = async () => {
-        //   const result = await axios(
-        //     'https://hn.algolia.com/api/v1/search?query=redux',
-        //   );
+      
           multiIsbn.find(search, function(err, data) {
             if (err) throw err
-                //console.log(data)
+                
             setData(data)
             })
-         // setData(result.data);
+         
         };
        
         fetchData();
