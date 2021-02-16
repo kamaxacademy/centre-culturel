@@ -6,6 +6,7 @@ import useSetState from './components/CustomHooks/useSetState'
 import Button from '@material-ui/core/Button';
 import Bookshelf from './components/Books/Bookshelf'
 import HomePage from './pages/HomePage';
+import BarcodeSearch from './components/BarcodeSearch/BarcodeSearch'
 
 function App() {
 const [state, setstate] = useSetState({
@@ -29,7 +30,7 @@ const [state, setstate] = useSetState({
   }
   return (
     <div className="App">
-    
+{/*     
    <Card
      name = {state.name} 
      dob = {state.dob}
@@ -53,7 +54,9 @@ const [state, setstate] = useSetState({
 
     <Bookshelf />
      
-     <HomePage />
+     <HomePage /> */}
+
+     <BarcodeSearch />
     </div>
   );
 }
