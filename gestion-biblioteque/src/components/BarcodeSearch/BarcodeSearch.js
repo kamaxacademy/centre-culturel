@@ -3,7 +3,7 @@ import axios from 'axios'
 import { Button } from '@material-ui/core';
 var multiIsbn = require("multi-isbn")
 
-// const isbn = require('node-isbn');
+const isbn = require('node-isbn');
  
 //isbn.resolve('2090386851', function (err, book) {
 //     if (err) {
@@ -14,7 +14,8 @@ var multiIsbn = require("multi-isbn")
 // });
 
 const BarcodeSearch = ()=>{
-    const [data, setData] = useState({ hits: [] });
+    // const [data, setData] = useState({ hits: [] });
+    const [data, setData] = useState([]);
     const [query, setQuery] = useState('');
     const [search, setSearch] =useState('');
     //9780156013987
@@ -26,8 +27,9 @@ const BarcodeSearch = ()=>{
         multiIsbn.init()
         const fetchData = async () => {
       
-          multiIsbn.find(search, function(err, data) {
-            if (err) throw err
+          //multiIsbn.find(search, function(err, data) {
+          isbn.resolve(search, function(err, data) {  
+          if (err) throw err
                 
             setData(data)
             })
@@ -50,15 +52,22 @@ const BarcodeSearch = ()=>{
                 Search
             </Button>
 
-        <ul>
-            {
-               data.data && data.data.length && <ul>
+        <ul> {/* data.data && data.data.length && <ul>
                         {data.data.map(item=>
                           <li key={item.title}>
                           <a href={item.publisher}>{item.title}</a>
                         </li>
                          ) }
-                </ul>
+                </ul> */}
+            {
+              //console.log(data),
+              
+                 data ? <ul>
+                        
+                          <li key={data.title}>{data.title}</li>
+                          <li>{data.publisher}</li>
+                         
+                </ul> : <h1>No Data Avalable</h1>
                 //data,
             //  console.log(data.data.length),
             //   data.length && console.log(data.data.length)
