@@ -8,15 +8,17 @@
 - https://www.npmjs.com/package/react-barcode-reader
 - https://dev.to/kornatzky/connect-a-barcode-scanner-to-an-electron-desktop-app-10mi
 
-- https://www.dynamsoft.com/codepool/cross-platform-desktop-barcode-electron.html
+- https://github.com/raysk4ever/fake_id_card_generator/blob/master/src/App.js
 
-- https://www.npmjs.com/package/node-usb-barcode-scanner (very good)
+* https://www.dynamsoft.com/codepool/cross-platform-desktop-barcode-electron.html
 
-- https://github.com/node-hid/node-hid
+* https://www.npmjs.com/package/node-usb-barcode-scanner (very good)
 
-- https://npm.io/search/keyword:barcode
+* https://github.com/node-hid/node-hid
 
-- https://blog.alexdevero.com/react-express-sqlite-app/
+* https://npm.io/search/keyword:barcode
+
+* https://blog.alexdevero.com/react-express-sqlite-app/
 
 Details for project
 

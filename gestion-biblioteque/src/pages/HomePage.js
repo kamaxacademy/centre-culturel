@@ -20,7 +20,7 @@ const HomePage = () => {
            <div className="shelf">
                  <img src="http://placehold.it/150x190/e8117f/fff&amp;text=Book%20Title"/>
            </div> */}
-<div className="bookshelf--frame">
+{/* <div className="bookshelf--frame">
   <div className="book-wrapper">
     <img src="http://placehold.it/150x190/e8117f/fff&amp;text=Book%20Title" width="300" height="500" alt="A tall book"/>
   </div>
@@ -41,7 +41,7 @@ const HomePage = () => {
   <div className="book-wrapper">
     <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=a+wide+book&w=400&h=280" width="400" height="280" alt="A wide book"/>
   </div>  
-</div>
+</div> */}
 
 <h1>Okay bro</h1>
 

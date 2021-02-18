@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import CssBaseline from "@material-ui/core/CssBaseline";
+import { BrowserRouter as Router } from "react-router-dom";
 import './index.css';
 import App from './App';
 // import reportWebVitals from './reportWebVitals';
@@ -11,7 +13,11 @@ const store = createStore(reducers)
 ReactDOM.render(
   //<React.StrictMode>
     <Provider store= {store}>
-      <App />
+      <Router>
+       <CssBaseline />
+        <App />
+      </Router>
+      
   </Provider>,
     
   
