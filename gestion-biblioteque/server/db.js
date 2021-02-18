@@ -32,6 +32,7 @@ knex.schema
                   table.string('pubDate');
                   table.string('isbn')
                   table.integer('rating');
+                  table.blob('image');
               });
               // Log success message
               console.log('Table \'Books\' created');

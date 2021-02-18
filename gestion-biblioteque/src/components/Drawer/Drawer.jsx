@@ -10,7 +10,10 @@ const drawerWidth = 240;
 const useStyles = makeStyles({
   drawer: {
     width: drawerWidth,
+    // margin:'20px'
   }
+
+
 });
 
 const Drawer = (props) => {
@@ -33,6 +36,11 @@ const Drawer = (props) => {
       onClick: () => history.push("/contact")
     },
     {
+      text: "Barcode",
+      icon: <MailIcon />,
+      onClick: () => history.push("/barcode")
+    },
+    {
       text: "Bookshelf",
       icon: <MailIcon />,
       onClick: () => history.push("/books")
@@ -47,20 +55,14 @@ const Drawer = (props) => {
         ];
     return (
         <MUIDrawer variant="permanent" className={classes.drawer}>
-            <List>
-                {/* {itemList.map((text, index) => (
-                <ListItem button key={text}>
-                    <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                    <ListItemText primary={text} />
-                </ListItem>
-                ))} */}
+            <List >
                 {itemList.map((item,index)=>{
                     const {text, icon, onClick} = item;
                     return (
-                        <ListItem button key={text} onClick={onClick}>
+                        <ListItem button key={text} onClick={onClick} >
                         {icon && <ListItemIcon>{icon}</ListItemIcon>}
                         <ListItemText primary={text} />
-            </ListItem>
+                </ListItem>
                     )
                 })}
             </List>

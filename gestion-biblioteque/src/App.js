@@ -157,13 +157,14 @@
 import React from 'react';
 import { Route, Switch } from "react-router-dom";
 import {makeStyles} from '@material-ui/core/styles'
-
+import './App.css'
 // Import Components
 import HomePage from './pages/HomePage'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import BookShelf from './components/Books/Bookshelf'
 import Card from './components/IdCard/Card'
+import BarcodeSearch from './components/BarcodeSearch/BarcodeSearch'
 import Drawer  from './components/Drawer/Drawer';
 
 const useStyles = makeStyles({
@@ -182,6 +183,7 @@ export default function App(){
         <Switch>
             <Route exact from="/" render={props => <HomePage {...props} />} />
             <Route exact path="/contact" render={props => <Contact {...props} />} />
+            <Route exact path="/barcode" render={props => <BarcodeSearch {...props} />} />
             <Route exact path="/about" render={props => <About {...props} />} />
             <Route exact path="/books" render={props => <BookShelf {...props} />} />
             <Route exact path="/member" render={props => <Card {...props} />} />

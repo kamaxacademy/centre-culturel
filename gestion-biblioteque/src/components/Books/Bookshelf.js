@@ -3,10 +3,22 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import BookshelfList from './bookshelf-list'
 
+ //2090386851
+// isbn.resolve(9782702124284, function (err, book) {
+//     if (err) {
+//         console.log('Book not found', err);
+//     } else {
+//         console.log('Book found %j', book);
+//     }
+// });
+
+
 // Import components
 
 import '../../styles/bookshelf.css'
 var multiIsbn = require("multi-isbn")
+
+
 
 const Bookshelf = () => {
     // Prepare states
@@ -17,6 +29,7 @@ const Bookshelf = () => {
   const [books, setBooks] = useState([])
   const [loading, setLoading] = useState(true)
   const [isbn, setIsbn] = useState('')
+ 
 // 
  multiIsbn.init()
 
@@ -50,8 +63,8 @@ const Bookshelf = () => {
 
    // Create new book
   const handleBookCreate = () => {
-
-    multiIsbn.find(isbn, function(err, data) {
+ const isbn = require('node-isbn')
+    isbn.resolve(isbn, function(err, data) {
   if (err) throw err
   // console.log(JSON.stringify(data, null, 2))
 
@@ -72,6 +85,7 @@ const Bookshelf = () => {
         pubDate: data.data[0].publishedDate,
         isbn: data.data[0].isbn13,
         rating: rating
+       
       })
       .then(res => {
         console.log(res.data)

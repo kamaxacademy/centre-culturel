@@ -1,0 +1,137 @@
+$brown: #A87328;
+$darkblue: #0C347D;
+$umber: #54290C;
+$springer: #EDED80;
+$darktan: #9A8548;
+$grad2: #373737;
+$grad1: darken($grad2, 2);
+$grad3: lighten($darktan, 4);
+$grad5: darken($darktan, 4);
+.list-books-content{
+    display: flex;
+}
+
+.bookshelf {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    width: 80%;
+    height: 100%;
+    //margin: 0 auto;
+    border: 20px $brown solid;
+    overflow: hidden;
+    background-size: auto, 10px 300px;
+    border-left: 20px solid $darktan;
+    border-right: 20px solid $darktan;
+
+    text-align: center;
+    background: tan;
+    // background: url('https://static.tumblr.com/8x9m588/C8ho55ylx/bg-wood2.png'), linear-gradient($grad1, $grad2 290px, $grad3 290px, $grad3 292px, $darktan 292px, $darktan 298px, $grad5 298px, $grad5 300px);
+    background-image: linear-gradient(darken($brown, 32%), darken($brown, 30%) 220px, lighten($brown, 4%) 220px, lighten($brown, 4%) 222px, $brown 222px, $brown 228px, darken($brown, 4%) 228px, darken($brown, 4%) 230px);
+    background-size: 10px 232px;
+
+    &:first-of-type {
+        border-top: 50px solid $darktan;
+    }
+   
+}
+// $brown: #A87328;
+// $darkblue: #0C347D;
+// $umber: #54290C;
+// $springer: #EDED80;
+// $darktan: #9A8548;
+// $grad2: #373737;
+// $grad1: darken($grad2, 2);
+// $grad3: lighten($darktan, 4);
+// $grad5: darken($darktan, 4);
+// .bookshelf {
+//     // width: 80%;
+//     // height: 100%;
+//     // margin: 0 auto;
+//     // border: 10px $brown solid;
+//     // overflow: hidden;
+//     background-size: auto, 10px 300px;
+//     border-left: 10px solid $darktan;
+//     border-right: 10px solid $darktan;
+
+//     text-align: center;
+//     background: tan;
+//     background: url('https://static.tumblr.com/8x9m588/C8ho55ylx/bg-wood2.png'), linear-gradient($grad1, $grad2 290px, $grad3 290px, $grad3 292px, $darktan 292px, $darktan 298px, $grad5 298px, $grad5 300px);
+//     // background-image: linear-gradient(darken($brown, 32%), darken($brown, 30%) 220px, lighten($brown, 4%) 220px, lighten($brown, 4%) 222px, $brown 222px, $brown 228px, darken($brown, 4%) 228px, darken($brown, 4%) 230px);
+//     // background-size: 10px 230px;
+//     // box-shadow: 0px 1000px 0px 400px #7A7668;
+
+//     &:first-of-type {
+//         border-top: 10px solid $darktan;
+//     }
+//     .book-wrapper {
+//         display: inline-block;
+//         width: 290px;
+//         vertical-align: bottom;
+//         height: 280px;
+//         position: relative;
+//         margin: 10px 0;
+//         max-width: 100%;
+//         img {
+//             height: auto;
+//             width: auto;
+//             position: absolute;
+//             bottom: 0;
+//             left: 50%;
+//             transform: translateX(-50%);
+//             max-height: 100%;
+//             max-width: 100%;
+//         }
+//     }
+
+// }
+
+// .book {
+//     height: 200px;
+//     width: 40px;
+//     float: left;
+//     color: white;
+//     font-size: 0.9em;
+//     font-family: Verdana, sans-serif;
+//     margin-bottom: 10px;
+//     margin-top: 20px;
+//     transition: transform 0.4s ease;
+// }
+// .book h2 {
+//     padding: 0;
+//     font-size: 1em;
+//     transform-origin: 0% 0%;
+//     transform: rotate(0.25turn) translateY(-35px);
+//     width: 170px;
+// }
+
+// .book h3 {
+//     padding: 0;
+//     font-size: 0.7em;
+//     transform-origin: 0 0;
+//     transform: rotate(0.25turn) translateY(-15px) translateX(-20px);
+//     width: 150px;
+// }
+// .book-green {
+//     background-color: darkgreen;
+//     border-left: 2px solid lighten(darkgreen, 4%);
+//     border-right: 2px solid darken(darkgreen, 4%);
+// }
+
+// .book-blue {
+//     background-color: $darkblue;
+//     border-left: 2px solid lighten($darkblue, 4%);
+//     border-right: 2px solid darken($darkblue, 4%);
+// }
+// .book-umber {
+//     background-color: $umber;
+//     border-left: 2px solid lighten($umber, 4%);
+//     border-right: 2px solid darken($umber, 4%);
+// }
+
+// .book-springer {
+//     background-color: $springer;
+//     border-left: 2px solid lighten($springer, 4%);
+//     border-right: 2px solid darken($springer, 4%);
+//     color: black;
+// }
