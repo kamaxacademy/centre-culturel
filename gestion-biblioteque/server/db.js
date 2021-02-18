@@ -2,7 +2,7 @@
 const path = require('path')
 
 // Get the location of database.sqlite file
-const dbPath = path.resolve(__dirname, 'db/database.sqlite')
+const dbPath = path.resolve(__dirname, 'db/databaseok.sqlite')
 
 const knex = require('knex')({
   client: 'sqlite3',

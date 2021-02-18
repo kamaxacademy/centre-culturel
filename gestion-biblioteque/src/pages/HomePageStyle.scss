@@ -8,7 +8,7 @@ $grad1: darken($grad2, 2);
 $grad3: lighten($darktan, 4);
 $grad5: darken($darktan, 4);
 .list-books-content{
-    display: flex;
+    display: inline;
 }
 
 .bookshelf {
@@ -86,24 +86,28 @@ $grad5: darken($darktan, 4);
 
 // }
 
-// .book {
-//     height: 200px;
-//     width: 40px;
-//     float: left;
-//     color: white;
-//     font-size: 0.9em;
-//     font-family: Verdana, sans-serif;
-//     margin-bottom: 10px;
-//     margin-top: 20px;
-//     transition: transform 0.4s ease;
-// }
-// .book h2 {
-//     padding: 0;
-//     font-size: 1em;
-//     transform-origin: 0% 0%;
-//     transform: rotate(0.25turn) translateY(-35px);
-//     width: 170px;
-// }
+// width: 140px;
+// 
+
+.book {
+    height: 200px;
+    width: 140px; //metel 40px
+    margin: 10px 10px; //retire sa
+    float: left;
+    color: white;
+    font-size: 0.9em;
+    font-family: Verdana, sans-serif;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    transition: transform 0.4s ease;
+}
+.book h2 {
+    padding: 0;
+    font-size: 1em;
+    transform-origin: 0% 0%;
+    transform: rotate(0.25turn) translateY(-35px);
+    width: 170px;
+}
 
 // .book h3 {
 //     padding: 0;
@@ -112,26 +116,34 @@ $grad5: darken($darktan, 4);
 //     transform: rotate(0.25turn) translateY(-15px) translateX(-20px);
 //     width: 150px;
 // }
-// .book-green {
-//     background-color: darkgreen;
-//     border-left: 2px solid lighten(darkgreen, 4%);
-//     border-right: 2px solid darken(darkgreen, 4%);
-// }
+.book-green {
+    background-color: darkgreen;
+    border-left: 2px solid lighten(darkgreen, 4%);
+    border-right: 2px solid darken(darkgreen, 4%);
+}
 
-// .book-blue {
-//     background-color: $darkblue;
-//     border-left: 2px solid lighten($darkblue, 4%);
-//     border-right: 2px solid darken($darkblue, 4%);
-// }
-// .book-umber {
-//     background-color: $umber;
-//     border-left: 2px solid lighten($umber, 4%);
-//     border-right: 2px solid darken($umber, 4%);
-// }
+.book-blue {
+    background-color: $darkblue;
+    border-left: 2px solid lighten($darkblue, 4%);
+    border-right: 2px solid darken($darkblue, 4%);
+}
+.book-white {
+    background-color: darkgreen;
+    border-left: 2px solid lighten($darkblue, 4%);
+    border-right: 2px solid darken($darkblue, 4%);
+}
+.book h3 {
+    color: #000;
+}
+.book-umber {
+    background-color: $umber;
+    border-left: 2px solid lighten($umber, 4%);
+    border-right: 2px solid darken($umber, 4%);
+}
 
-// .book-springer {
-//     background-color: $springer;
-//     border-left: 2px solid lighten($springer, 4%);
-//     border-right: 2px solid darken($springer, 4%);
-//     color: black;
-// }
+.book-springer {
+    background-color: $springer;
+    border-left: 2px solid lighten($springer, 4%);
+    border-right: 2px solid darken($springer, 4%);
+    color: black;
+}

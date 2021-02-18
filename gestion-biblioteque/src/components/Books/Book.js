@@ -31,11 +31,14 @@ export default function Book(props) {
              )
          } else {
              return (
+
                 <li>
-                <div className="book">
-                    <div className="book-title">{thisbook.title}</div>
-                    <div className="book-top">
-                        <div 
+                <div className="book book-white">
+                    <h3>{thisbook.title}</h3>
+                    <h3>{thisbook.author}</h3>
+                    {/* <div className="book-title">{thisbook.title}</div> */}
+                      {/*<div className="book-top">
+                       <div 
                             className="book-cover" 
                             style={{ 
                                 width: 128, 
@@ -46,11 +49,11 @@ export default function Book(props) {
                             }}
                         >
                                 
-                        </div>
+                        </div> 
                        
-                    </div>
+                    </div>*/}
                     
-                    <div className="book-authors">{thisbook.author ? thisbook.author.toString() : 'Nothing!'}</div>
+                    {/* <div className="book-authors">{thisbook.author ? thisbook.author.toString() : 'Nothing!'}</div> */}
                 </div>
             </li>
         )

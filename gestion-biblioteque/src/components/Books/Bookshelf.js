@@ -4,20 +4,13 @@ import axios from 'axios'
 import BookshelfList from './bookshelf-list'
 
  //2090386851
-// isbn.resolve(9782702124284, function (err, book) {
-//     if (err) {
-//         console.log('Book not found', err);
-//     } else {
-//         console.log('Book found %j', book);
-//     }
-// });
 
 
 // Import components
 
 import '../../styles/bookshelf.css'
 var multiIsbn = require("multi-isbn")
-
+const ok = require('node-isbn')
 
 
 const Bookshelf = () => {
@@ -29,7 +22,7 @@ const Bookshelf = () => {
   const [books, setBooks] = useState([])
   const [loading, setLoading] = useState(true)
   const [isbn, setIsbn] = useState('')
- 
+  
 // 
  multiIsbn.init()
 
@@ -63,40 +56,68 @@ const Bookshelf = () => {
 
    // Create new book
   const handleBookCreate = () => {
- const isbn = require('node-isbn')
-    isbn.resolve(isbn, function(err, data) {
-  if (err) throw err
-  // console.log(JSON.stringify(data, null, 2))
-
-        //  data.map(data =>console.log(data.title))
-        // console.log(data.data[0].title)
-        console.log(data)
 
 
-    // Send POST request to 'books/create' endpoint
-    axios
-      .post('http://localhost:4001/books/create', {
-        // author: author,
-        // title: title,
-        // pubDate: pubDate,
-        // rating: rating
-        author: data.data[0].authors[0],
-        title: data.data[0].title,
-        pubDate: data.data[0].publishedDate,
-        isbn: data.data[0].isbn13,
-        rating: rating
-       
-      })
-      .then(res => {
-        console.log(res.data)
-
-        // Fetch all books to refresh
-        // the books on the bookshelf list
-        fetchBooks()
-      })
-      .catch(error => console.error(`There was an error creating the ${title} book: ${error}`))
+    ok.resolve(9782702124284, function (err, book) {
+    if (err) {
+        console.log('Book not found', err);
+    } else {
+        console.log('Book found %j', book);
+        axios.post('http://localhost:4001/books/create', {
+          author: book.authors,
+          title: book.title,
+          pubDate: book.publishedDate,
+          isbn: isbn,
+          rating: rating,
+          image:book.imageLinks
+        })
+        .then(res => {
+          console.log(res.data.message)
+  
+          // Fetch all books to refresh
+          // the books on the bookshelf list
+          fetchBooks()
+        })
+        .catch(error => console.error(`There was an error creating the ${title} book: ${error}`))
     
-    })
+        
+    }
+});
+
+  //   ok.resolve(isbn, function(err, data) { 
+  //     console.log('ooooooooo')
+  // if (err) throw err
+  // // console.log(JSON.stringify(data, null, 2))
+
+  //       //  data.map(data =>console.log(data.title))
+  //       // console.log(data.data[0].title)
+       
+
+
+  //   // Send POST request to 'books/create' endpoint
+  //   axios
+  //     .post('http://localhost:4001/books/create', {
+  //       // author: author,
+  //       // title: title,
+  //       // pubDate: pubDate,
+  //       // rating: rating
+  //       author: data.data[0].authors[0],
+  //       title: data.data[0].title,
+  //       pubDate: data.data[0].publishedDate,
+  //       isbn: data.data[0].isbn13,
+  //       rating: rating
+       
+  //     })
+  //     .then(res => {
+  //       console.log(res.data)
+
+  //       // Fetch all books to refresh
+  //       // the books on the bookshelf list
+  //       fetchBooks()
+  //     })
+  //     .catch(error => console.error(`There was an error creating the ${title} book: ${error}`))
+    
+  //   })
   }
 
   // Submit new book
