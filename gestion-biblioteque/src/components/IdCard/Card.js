@@ -4,8 +4,7 @@ import './Card.css'
 
 const Card = (props) => {
    const {name, dob, phone, email, image, nationality, showInputName, showInputDob, showInputPhone, showInputEmail, showInputNationality, onClick, onChange, onKeyChange, idCardNumber } = props;
-
-   
+  
     return (
              <div className="id-card" >
             <div className="card-header">

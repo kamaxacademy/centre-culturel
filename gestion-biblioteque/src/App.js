@@ -166,30 +166,40 @@ import BookShelf from './components/Books/Bookshelf'
 import Card from './components/IdCard/Card'
 import BarcodeSearch from './components/BarcodeSearch/BarcodeSearch'
 import Drawer  from './components/Drawer/Drawer';
+import ResponsiveDrawer from './components/Drawer/ResponsiveDrawer';
 
 const useStyles = makeStyles({
     container:{
         //
-         display:"flex"
+         display:"flex",
+         flexDirection:'column'
+    
+        
         //display:""
     }
 })
 
 export default function App(){
-    const classes = useStyles();
+    //const classes = useStyles();
     return (
-        <div className={classes.container}>
-        <Drawer />
         <Switch>
-            <Route exact from="/" render={props => <HomePage {...props} />} />
-            <Route exact path="/contact" render={props => <Contact {...props} />} />
-            <Route exact path="/barcode" render={props => <BarcodeSearch {...props} />} />
-            <Route exact path="/about" render={props => <About {...props} />} />
-            <Route exact path="/books" render={props => <BookShelf {...props} />} />
-            <Route exact path="/member" render={props => <Card {...props} />} />
+            <Route path='/' component={ResponsiveDrawer}/>
+        </Switch>
+        // <div className={classes.container}>  // </div>
+       
+        // <Switch>
+        //     {/* <Route exact from="/" render={props => <HomePage {...props} />} /> */}
+        //     <Route path="/" component={HomePage} />
+        //      <Route exact path="/contact" component={Contact} />
+        //     {/* <Route exact path="/contact" render={props => <Contact {...props} />} /> */}
+        //     <Route exact path="/barcode" render={props => <BarcodeSearch {...props} />} />
+        //     <Route exact path="/about" render={props => <About {...props} />} />
+        //     <Route exact path="/books" render={props => <BookShelf {...props} />} />
+        //     <Route exact path="/member" render={props => <Card {...props} />} />
 
-        </Switch>         
-        </div>
+        // </Switch>    
+           
+      
     );
 }
 

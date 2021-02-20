@@ -11,13 +11,20 @@ import {Provider} from "react-redux";
 // import reducers from './store'
 // const store = createStore(reducers)
 import store from './store'
+import { createBrowserHistory } from "history";
+import ResponsiveDrawer from './components/Drawer/ResponsiveDrawer';
+
+
+const hist = createBrowserHistory();
 
 ReactDOM.render(
   //<React.StrictMode>
     <Provider store= {store}>
-      <Router>
-       <CssBaseline />
-        <App />
+      <Router history={hist}>
+       {/* <CssBaseline />
+        */}
+        {/* <ResponsiveDrawer /> */}
+        <App /> 
       </Router>
       
   </Provider>,
