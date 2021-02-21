@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import HomePage from '../pages/HomePage';
 import Contact from '../pages/Contact';
 import QrCodeScanner from '../components/QrCode/QrCodeScanner';
-
+import Headline from '../Test-Examples/Headline'
 import CanvasComponent from '../components/Canvas/CanvasComponent';
 import Bookshelf from '../components/Books/Bookshelf';
 import BarcodeSearch from '../components/BarcodeSearch/BarcodeSearch';
@@ -50,10 +50,27 @@ const routes = [
         name: "Barcode Search",
         component: BarcodeSearch,
         toolbar: () => <p>Barcode search</p>,
+    },
+
+    {
+        path:"/headline",
+        exact: true,
+        name: "Headline Test",
+        component:()=> <Headline header="Posts" desc="Click the button to render post" tempArr={tempArr}/>,
+        toolbar: () => <p>Barcode search</p>,
     }
 
 ]
 
-
+/* This const is not used within our app.
+   Although we are passing it to the Headline Component
+   it is only here as an exampleof testing PropTypes */
+const tempArr = [{
+  fName: 'Joe',
+  lName: 'Bloggs',
+  email: 'joebloggs@gmail.com',
+  age: 24,
+  onlineStatus: true
+}];
 
 export default routes;
