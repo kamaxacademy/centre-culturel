@@ -1,7 +1,5 @@
 import Axios from 'axios';
 import generate from '../../helpers/data'
-
-
 import {
     BOOK_LIST_FAIL,
     BOOK_LIST_REQUEST,
@@ -28,22 +26,3 @@ export const listBooks = ({}) => async (dispatch) => {
       dispatch({ type: BOOK_LIST_FAIL, payload: error.message });
     }
   };
-
-  // export const filterByDate=(books,date)=>(dispatch)=>{
-  //  return dispatch({
-  //    type: FILTER_BY_DATE,
-  //    payload:{
-  //      date: date,
-  //      items: date ===''? books : books.filter(product => {
-  //             return product.title.toLowerCase().includes(date) ||
-  //                 product.author.toLowerCase().includes(date);
-  //      }
-  //       )
-  //    }
-  //  })
-  // }
-
-  export const sortByDate = payload =>({
-    type: SORT_BY_DATE,
-    payload
-  })

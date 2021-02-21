@@ -2,8 +2,6 @@
 import React from 'react'
 import useSetState from '../CustomHooks/useSetState';
 
-
-
 const BookshelfListRow = (props) => {
   const [state, setstate] = useSetState({
     position: '',

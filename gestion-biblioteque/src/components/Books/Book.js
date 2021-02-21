@@ -1,24 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import './Book.css'
-
+import background from '../../assets/images/red.jpg'
 export default function Book(props) {
          
          const {thisbook} = props
-        // console.log('thisbook',thisbook)
+ 
          if (thisbook.imageLinks){
              return (
-                <li>
+            <li>
                 <div className="book">
                     <div className="book-top">
                         <div 
                             className="book-cover" 
-                            // style={{ 
-                            //     width: 128, 
-                            //     height: 193, 
-                            //     // backgroundImage: `url(${thisbook.imageLinks.thumbnail})`,
-                            //     backgroundSize: 'cover',
-                            //     backgroundPosition: 'center'
-                            // }}
                         >
                                 
                         </div>
@@ -33,27 +26,18 @@ export default function Book(props) {
              return (
 
                 <li>
-                <div className="book book-white">
+                <div className="book book-white"
+                    // style={{
+                    //     backgroundImage: `url(${background})`,
+                    //     width: 128, 
+                    //     height: 193,
+                    //     backgroundColor:"red"
+                    // }}
+                >
                     <h3>{thisbook.title}</h3>
                     <h3>{thisbook.author}</h3>
-                    {/* <div className="book-title">{thisbook.title}</div> */}
-                      {/*<div className="book-top">
-                       <div 
-                            className="book-cover" 
-                            style={{ 
-                                width: 128, 
-                                height: 193, 
-                                backgroundImage: `url(https://ibf.org/site_assets/img/placeholder-book-cover-default.png)`,
-                                backgroundSize: 'cover',
-                                backgroundPosition: 'center'
-                            }}
-                        >
-                                
-                        </div> 
-                       
-                    </div>*/}
+                
                     
-                    {/* <div className="book-authors">{thisbook.author ? thisbook.author.toString() : 'Nothing!'}</div> */}
                 </div>
             </li>
         )

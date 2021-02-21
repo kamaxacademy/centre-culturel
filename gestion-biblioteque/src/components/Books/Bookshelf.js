@@ -2,16 +2,12 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import BookshelfList from './bookshelf-list'
-
  //2090386851
-
-
 // Import components
 
 import '../../styles/bookshelf.css'
 var multiIsbn = require("multi-isbn")
 const ok = require('node-isbn')
-
 
 const Bookshelf = () => {
     // Prepare states
@@ -84,40 +80,6 @@ const Bookshelf = () => {
     }
 });
 
-  //   ok.resolve(isbn, function(err, data) { 
-  //     console.log('ooooooooo')
-  // if (err) throw err
-  // // console.log(JSON.stringify(data, null, 2))
-
-  //       //  data.map(data =>console.log(data.title))
-  //       // console.log(data.data[0].title)
-       
-
-
-  //   // Send POST request to 'books/create' endpoint
-  //   axios
-  //     .post('http://localhost:4001/books/create', {
-  //       // author: author,
-  //       // title: title,
-  //       // pubDate: pubDate,
-  //       // rating: rating
-  //       author: data.data[0].authors[0],
-  //       title: data.data[0].title,
-  //       pubDate: data.data[0].publishedDate,
-  //       isbn: data.data[0].isbn13,
-  //       rating: rating
-       
-  //     })
-  //     .then(res => {
-  //       console.log(res.data)
-
-  //       // Fetch all books to refresh
-  //       // the books on the bookshelf list
-  //       fetchBooks()
-  //     })
-  //     .catch(error => console.error(`There was an error creating the ${title} book: ${error}`))
-    
-  //   })
   }
 
   // Submit new book

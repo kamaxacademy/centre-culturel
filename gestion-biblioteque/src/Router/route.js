@@ -4,6 +4,9 @@ import HomePage from '../pages/HomePage';
 import Contact from '../pages/Contact';
 import QrCodeScanner from '../components/QrCode/QrCodeScanner';
 
+import CanvasComponent from '../components/Canvas/CanvasComponent';
+import Bookshelf from '../components/Books/Bookshelf';
+import BarcodeSearch from '../components/BarcodeSearch/BarcodeSearch';
 
 const routes = [
     {
@@ -27,6 +30,27 @@ const routes = [
         component: QrCodeScanner,
         toolbar: () => <p>QR Scanneer</p>,
     },
+     {
+        path:"/canvas",
+        exact: true,
+        name: "Canvas",
+        component: CanvasComponent,
+        toolbar: () => <p>Canvas</p>,
+    },
+     {
+        path:"/bookshelf",
+        exact: true,
+        name: "Bookshelf",
+        component: Bookshelf,
+        toolbar: () => <p>Bookshelf</p>,
+    },
+     {
+        path:"/barcode",
+        exact: true,
+        name: "Barcode Search",
+        component: BarcodeSearch,
+        toolbar: () => <p>Barcode search</p>,
+    }
 
 ]
 
