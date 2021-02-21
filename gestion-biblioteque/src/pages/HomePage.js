@@ -37,7 +37,7 @@ export default function HomePage(props){
     const colors = ['#d5d5d5', '#a9a9a9'] 
 
   return(
-<>
+<div data-test="HomeComponent">
 
 <div className='karl'>
    <input 
@@ -63,7 +63,7 @@ export default function HomePage(props){
 </div>
 
 
-</>
+</div>
 
   )
 }
