@@ -2,6 +2,7 @@
 import React, {useState, useRef} from 'react';
 import {Container, Card, CardContent, makeStyles, Grid, TextField, Button} from '@material-ui/core';
 import QRCode from 'qrcode';
+import { checkPropTypes } from 'prop-types';
 
 const useStyles = makeStyles((theme) => ({
     conatiner: {
@@ -27,7 +28,9 @@ const QrCodeScanner = () => {
     const [imageUrl, setImageUrl] = useState('');
 
     
-  const generateQrCode = async () => {
+  const generateQrCode = async (props) => {
+
+    
     try {
 //         var opts = {
 //   errorCorrectionLevel: 'H',
@@ -67,6 +70,10 @@ const QrCodeScanner = () => {
              </Grid>
        </Grid>
     );
+}
+
+QrCodeScanner.protoTypes={
+ // generateEvent: checkPropTypes.func
 }
 
 export default QrCodeScanner;

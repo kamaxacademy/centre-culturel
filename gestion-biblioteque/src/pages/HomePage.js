@@ -16,8 +16,10 @@ export default function HomePage(props){
   const dispatch = useDispatch();
   const bookList = useSelector((state)=>state.bookList);
 
-     console.log('debug', bookList)
+  console.log('debug', bookList)
   const {loading,books} = bookList;
+
+  console.log(books)
   const [search, setSearch] = useState("");
   const [filteredBooks, setFilteredBooks] = useState([]);
 

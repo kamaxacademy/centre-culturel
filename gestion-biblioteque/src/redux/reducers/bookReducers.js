@@ -5,8 +5,17 @@ import {
     FILTER_BY_DATE
 } from '../constants/bookConstant';
 
+const initialState =
+ {
+  loading:true, 
+  books:[]
+ }
+
+
 export const bookListReducer = (
-    state = {loading:true, books:[], filteredItems:[], date:''},
+    // state = {loading:true, books:[], filteredItems:[], date:''},
+   // state = {loading:true, books:[] },
+    state = initialState,
     action
 )=> {
     switch (action.type) {

@@ -20,6 +20,7 @@ export const listBooks = ({}) => async (dispatch) => {
       // );
       //  console.log('data from bookaction',data)
       let data = generate(20)
+      console.log('data from bookaction',data)
       dispatch({ type: BOOK_LIST_SUCCESS, payload: data });
      
     } catch (error) {
