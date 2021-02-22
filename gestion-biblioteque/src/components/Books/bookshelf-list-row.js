@@ -1,6 +1,14 @@
 // Import deps
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+
 import useSetState from '../CustomHooks/useSetState';
+import { Link } from 'react-router-dom';
+
+
+//Custom Import 
+import {detailsBook} from '../../redux/actions/bookAction'
+
 
 const BookshelfListRow = (props) => {
   const [state, setstate] = useSetState({
@@ -14,6 +22,19 @@ const BookshelfListRow = (props) => {
     rating:'',
   }
 });
+
+   const bookDetails = useSelector((state)=>state.bookDetails);
+    const {book, loading} = bookDetails;
+
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+       // dispatch(detailsBook())
+        return () => {
+           //
+        }
+    }, [])
+
 
   return (
     <tr className="table-row">
@@ -48,6 +69,17 @@ const BookshelfListRow = (props) => {
         Remove book
       </button>
     </td>
+
+     <td className="table-item">
+      <button
+        className="btn btn-remove"
+        onClick={() => dispatch(detailsBook(props.book.id))}
+        >
+        view book
+          {props.book.id}
+      </button>
+    </td>
+
   </tr>
   );
 }

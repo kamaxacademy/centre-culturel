@@ -1,4 +1,5 @@
 // Import database
+const { where } = require('./../db')
 const knex = require('./../db')
 
 
@@ -47,6 +48,30 @@ exports.booksAll = async (req, res) => {
       // Send a error message in response
       res.json({ message: `There was an error retrieving books: ${err}` })
     })
+}
+
+
+//Retrieve Single Book
+exports.BookSingle = async ( req, res)=>{
+  //get Single book from database
+
+  
+  knex('books')
+//  .where('id', req.body.id)
+  .where('id', req.body.bookId)
+  .select('author')
+  .select('title')
+   // find correct record based on id
+  .then(userData =>{
+     // Send books extracted from database in response
+     console.log('user data',userData)
+      // console.log('body',req)
+    res.json(userData)
+  })
+  .catch(err =>{
+     // Send a error message in response
+      res.json({ message: `There was an error retrieving books: ${err}` })
+  })
 }
 
 // // Create new book

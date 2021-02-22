@@ -2,6 +2,11 @@ import {
     BOOK_LIST_FAIL,
     BOOK_LIST_REQUEST,
     BOOK_LIST_SUCCESS,
+
+    BOOK_DETAILS_FAIL,
+    BOOK_DETAILS_REQUEST,
+    BOOK_DETAILS_SUCCESS,
+
     FILTER_BY_DATE
 } from '../constants/bookConstant';
 
@@ -37,3 +42,26 @@ export const bookListReducer = (
         return state;
     }
   };
+
+  //Book Details 
+
+export const bookDetailsReducer=(
+  
+  state={product:{}},
+  action
+  
+  )=>{
+  switch(action.type){
+    case BOOK_DETAILS_REQUEST:
+      return {loading:true};
+    case BOOK_DETAILS_SUCCESS:
+      return {
+        loading: false,
+        product: action.payload
+      };
+    case BOOK_DETAILS_FAIL:
+       return { loading: false, error: action.payload };
+    default:
+      return state;
+  }
+}
