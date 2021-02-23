@@ -1,5 +1,6 @@
 # Getting Started with Create React App
 
+- https://github.com/tngoman/Store-POS/blob/master/api/settings.js
 - https://bookshelfjs.org/
 - https://github.com/ChooseDews/MyBooksIO
 - https://www.theodinproject.com/courses/javascript/lessons/library
