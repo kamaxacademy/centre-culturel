@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+- https://github.com/weixiyen/messenger.js
+- https://js.plainenglish.io/building-a-point-of-sale-system-with-node-react-c2c0395ccaca
 - https://github.com/tngoman/Store-POS/blob/master/api/settings.js
 - https://bookshelfjs.org/
 - https://github.com/ChooseDews/MyBooksIO
