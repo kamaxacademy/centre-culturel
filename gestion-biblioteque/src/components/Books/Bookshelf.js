@@ -104,6 +104,7 @@ const Bookshelf = () => {
       .then(() => {
         console.log(`Book ${title} removed.`)
 
+        
         // Fetch all books to refresh
         // the books on the bookshelf list
         fetchBooks()

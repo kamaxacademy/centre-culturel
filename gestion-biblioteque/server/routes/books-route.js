@@ -27,5 +27,11 @@ router.put('/delete', booksRoutes.booksDelete)
 // this means that '/reset' translates to '/books/reset'
 router.put('/reset', booksRoutes.booksReset)
 
+
+// Add route for GET request to retrieve a single book
+// In server.js, books route is specified as '/books'
+// this means that '/id' translates to '/books/id'
+router.put('/id', booksRoutes.BookSingle)
+
 // Export router
 module.exports = router
