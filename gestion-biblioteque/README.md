@@ -35,6 +35,35 @@
 * https://www.c-sharpcorner.com/UploadFile/ea3ed6/database-design-for-library-management-system/
 *
 
+### Ui ressrouces
+* https://blog.alexdevero.com/react-express-sqlite-app/
+
+### Front End Ressources
+* https://dev.to/rossanodan/building-a-navigation-drawer-with-material-ui-and-react-router-dom-1j6l
+* https://github.com/tngoman/Store-POS/tree/master/assets
+* https://futurestud.io/tutorials/download-files-images-with-axios-in-node-js
+* https://stackoverflow.com/questions/41846669/download-an-image-using-axios-and-convert-it-to-base64
+* https://youtube.com/playlist?list=PL-Db3tEF6pB8Am-IhCRgyGSxTalkDpUV_ ( React Redux Integration)
+* https://www.youtube.com/watch?v=CjFWbEOcq-Y (react router)
+* https://codesandbox.io/s/0c4kk?file=/src/components/layouts/Header.jsx 
+* https://codesandbox.io/s/qxxrnm5v14?file=/src/layouts/MainLayout/index.js
+* https://react-hook-form.com/  (React Hook Form)
+* https://www.youtube.com/watch?v=bU_eq8qyjic (React Hook Form)
+* https://www.youtube.com/watch?v=bU_eq8qyjic (Fetching Data Hooks)
+* https://steemit.com/utopian-io/@pckurdu/build-an-application-with-react-hooks-material-ui-and-firebase-part2 (Login Form)
+* https://www.youtube.com/watch?v=l8WPWK9mS5M (box Shadow)
+* https://codepen.io/mmmchan/pen/JRdPOo
+* http://examples.hmp.is.it/book.php (bookcase example)
+* https://hmp.is.it/making-a-fancy-book-using-html5-canvases/
+
+### Backend Ressources
+* https://www.youtube.com/watch?v=l8WPWK9mS5M (Postman Video)
+* 
+* 
+
+
+
+
 ### Once you play around a little, you might notice a glaring bug – pagination doesn’t work properly with filters applied.
 
 ### Despite using query parameters throughout the project, they aren’t relied on too extensively. In a production app, they should be referenced every time a page is loaded before serving up the documents.
