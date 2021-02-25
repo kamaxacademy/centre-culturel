@@ -1,5 +1,6 @@
 // Import express
 import express from "express"
+import expressAsyncHandler from 'express-async-handler';
 
 // Import users-controller
 import {getAllUsers, createUser, getUser, deleteUser, updateUser} from '../controllers/userController.js'
