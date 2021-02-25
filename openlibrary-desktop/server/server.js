@@ -7,7 +7,7 @@ import helmet from 'helmet'
 
 //Import all Routes
 import userRoutes from './routes/users.js'
-
+import booksRoutes from './routes/books-route.js'
 // Create express app
 const app = express()
 
@@ -28,7 +28,8 @@ const PORT =5000;
   app.use(bodyParser.json());
 
 
-app.use('/users', userRoutes)
+app.use('/users', userRoutes);
+app.use('/books', booksRoutes)
 
 app.get('/', function (req, res) {
     res.send('hello world')
