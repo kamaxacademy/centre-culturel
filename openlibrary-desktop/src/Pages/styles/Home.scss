@@ -1,0 +1,67 @@
+$brown: #A87328;
+$darkblue: #0C347D;
+$umber: #54290C;
+$springer: #EDED80;
+$darktan: #9A8548;
+$grad2: #373737;
+$grad1: darken($grad2, 2);
+$grad3: lighten($darktan, 4);
+$grad5: darken($darktan, 4);
+.Home__bookshelf {
+    // background-image: linear-gradient(darken($brown, 32%), darken($brown, 10%) 220px, lighten($brown, 4%) 220px, lighten($brown, 4%) 222px, $brown 222px, $brown 228px, darken($brown, 4%) 228px, darken($brown, 4%) 230px);
+    padding: 0;
+    margin: 0 auto;
+    width: 80%;
+    height: 100%;
+    border: 20px $brown solid;
+    border-left: 20px solid white;
+    border-right: 20px solid white;
+    background: tan;
+    background-image: linear-gradient(darken($brown, 32%), darken($brown, 10%) 220px, lighten($brown, 4%) 220px, lighten($brown, 4%) 222px, $brown 222px, $brown 228px, darken($brown, 4%) 228px, darken($brown, 4%) 230px);
+    background-size: 10px 232px;
+    &:first-of-type {
+        border-top: 50px solid $darktan;
+    }
+}
+
+.Home_book {
+    height: 200px;
+    width: 140px; //metel 40px
+    margin: 10px 10px; //retire sa
+    float: left;
+    color: white;
+    font-size: 0.9em;
+    font-family: Verdana, sans-serif;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    transition: transform 0.4s ease;
+}
+
+.Home_book-white {
+    background-color: white;
+    color: black;
+    border-left: 2px solid lighten($darkblue, 4%);
+    border-right: 2px solid darken($darkblue, 4%);
+    //9782702124284
+    // background-image: url('https://ia801606.us.archive.org/view_archive.php?archive=/19/items/olcovers98/olcovers98-L.zip&file=983129-L.jpg&ext=');
+    background-image: url('http://covers.openlibrary.org/b/isbn/9782702124284-M.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+// .Home_book h2 {
+//     color: black;
+//     padding: 0;
+//     font-size: 1em;
+//     transform-origin: 0% 0%;
+//     transform: rotate(0.25turn) translateY(-35px);
+//     width: 170px;
+// }
+// .Home_book h3 {
+//     color: black;
+//     padding: 0;
+//     font-size: 1em;
+//     //transform-origin: 0% 0%;
+//     //transform: rotate(0.25turn) translateY(-35px);
+//     width: 170px;
+// }

@@ -1,5 +1,4 @@
-[
-    {
+[{
         "title": "J'accuse l'économie triomphante",
         "publishedDate": "1995",
         "authors": [
@@ -18,83 +17,79 @@
         "publisher": "Calmann-Lévy",
         "language": "fr"
     },
-    
-        {
-            "title": "Français.com niveau intermédiaire B1",
-            "subtitle": "Français professionnel",
-            "authors": [
-                "Jean-Luc Penfornis"
-            ],
-            "publisher": "CLE International",
-            "publishedDate": "2018-10-03",
-            "industryIdentifiers": [
-                {
-                    "type": "ISBN_10",
-                    "identifier": "2090386851"
-                },
-                {
-                    "type": "ISBN_13",
-                    "identifier": "9782090386851"
-                }
-            ],
-            "readingModes": {
-                "text": false,
-                "image": false
+    {
+        "title": "Français.com niveau intermédiaire B1",
+        "subtitle": "Français professionnel",
+        "authors": [
+            "Jean-Luc Penfornis"
+        ],
+        "publisher": "CLE International",
+        "publishedDate": "2018-10-03",
+        "industryIdentifiers": [{
+                "type": "ISBN_10",
+                "identifier": "2090386851"
             },
-            "pageCount": 176,
-            "printType": "BOOK",
-            "maturityRating": "NOT_MATURE",
-            "allowAnonLogging": false,
-            "contentVersion": "preview-1.0.0",
-            "panelizationSummary": {
-                "containsEpubBubbles": false,
-                "containsImageBubbles": false
-            },
-            "language": "en",
-            "previewLink": "http://books.google.com/books?id=tOPpvgEACAAJ&dq=isbn:2090386851&hl=&cd=1&source=gbs_api",
-            "infoLink": "http://books.google.com/books?id=tOPpvgEACAAJ&dq=isbn:2090386851&hl=&source=gbs_api",
-            "canonicalVolumeLink": "https://books.google.com/books/about/Fran%C3%A7ais_com_niveau_interm%C3%A9diaire_B1.html?hl=&id=tOPpvgEACAAJ"
+            {
+                "type": "ISBN_13",
+                "identifier": "9782090386851"
+            }
+        ],
+        "readingModes": {
+            "text": false,
+            "image": false
         },
-        {
-            "title": "Code Complete",
-            "authors": [
-                "Steve McConnell"
-            ],
-            "publisher": "Pearson Education",
-            "publishedDate": "2004",
-            "description": "Features the best practices in the art and science of constructing software--topics include design, applying good techniques to construction, eliminating errors, planning, managing construction activities, and relating personal character to superior software. Original. (Intermediate)",
-            "industryIdentifiers": [
-                {
-                    "type": "ISBN_13",
-                    "identifier": "9780735619678"
-                },
-                {
-                    "type": "ISBN_10",
-                    "identifier": "0735619670"
-                }
-            ],
-            "readingModes": {
-                "text": false,
-                "image": true
+        "pageCount": 176,
+        "printType": "BOOK",
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "panelizationSummary": {
+            "containsEpubBubbles": false,
+            "containsImageBubbles": false
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=tOPpvgEACAAJ&dq=isbn:2090386851&hl=&cd=1&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=tOPpvgEACAAJ&dq=isbn:2090386851&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Fran%C3%A7ais_com_niveau_interm%C3%A9diaire_B1.html?hl=&id=tOPpvgEACAAJ"
+    },
+    {
+        "title": "Code Complete",
+        "authors": [
+            "Steve McConnell"
+        ],
+        "publisher": "Pearson Education",
+        "publishedDate": "2004",
+        "description": "Features the best practices in the art and science of constructing software--topics include design, applying good techniques to construction, eliminating errors, planning, managing construction activities, and relating personal character to superior software. Original. (Intermediate)",
+        "industryIdentifiers": [{
+                "type": "ISBN_13",
+                "identifier": "9780735619678"
             },
-            "pageCount": 914,
-            "printType": "BOOK",
-            "categories": [
-                "Computers"
-            ],
-            "averageRating": 4,
-            "ratingsCount": 13,
-            "maturityRating": "NOT_MATURE",
-            "allowAnonLogging": false,
-            "contentVersion": "preview-1.0.0",
-            "imageLinks": {
-                "smallThumbnail": "http://books.google.com/books/content?id=pDsFCAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-                "thumbnail": "http://books.google.com/books/content?id=pDsFCAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-            },
-            "language": "en",
-            "previewLink": "http://books.google.com/books?id=pDsFCAAAQBAJ&printsec=frontcover&dq=isbn:0735619670&hl=&cd=1&source=gbs_api",
-            "infoLink": "http://books.google.com/books?id=pDsFCAAAQBAJ&dq=isbn:0735619670&hl=&source=gbs_api",
-            "canonicalVolumeLink": "https://books.google.com/books/about/Code_Complete.html?hl=&id=pDsFCAAAQBAJ"
-        }
-    
+            {
+                "type": "ISBN_10",
+                "identifier": "0735619670"
+            }
+        ],
+        "readingModes": {
+            "text": false,
+            "image": true
+        },
+        "pageCount": 914,
+        "printType": "BOOK",
+        "categories": [
+            "Computers"
+        ],
+        "averageRating": 4,
+        "ratingsCount": 13,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=pDsFCAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=pDsFCAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=pDsFCAAAQBAJ&printsec=frontcover&dq=isbn:0735619670&hl=&cd=1&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=pDsFCAAAQBAJ&dq=isbn:0735619670&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Code_Complete.html?hl=&id=pDsFCAAAQBAJ"
+    }
 ]

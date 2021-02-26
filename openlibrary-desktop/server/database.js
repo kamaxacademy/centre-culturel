@@ -20,7 +20,7 @@ let db = new sqlite3.Database(DBSOURCE, (err) => {
             )`,
         (err) => {
             if (err) {
-                // Table already created
+                // Table already created/test
             }else{
                 // Table just created, creating some rows
                 var insert = 'INSERT INTO users (name, email, password) VALUES (?,?,?)'
