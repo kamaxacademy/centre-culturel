@@ -8,7 +8,6 @@ import List from '@material-ui/core/List';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
-import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
@@ -17,19 +16,39 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
-
+import { Grid, InputBase, IconButton, Badge } from '@material-ui/core'
+import NotificationsNoneIcon from '@material-ui/icons/NotificationsNone';
+import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
+import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
+import SearchIcon from '@material-ui/icons/Search';
 //Import 3rd Party
 import { Link, Route, BrowserRouter as Router} from 'react-router-dom'
 //Import Custom Components
 import routes from '../Routes'
+import Header from './Header';
+
 
 const drawerWidth = 290;
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
+
+
   },
+  searchInput: {
+    opacity: '0.6',
+    padding: `0px ${theme.spacing(1)}px`,
+    fontSize: '0.8rem',
+    '&:hover': {
+        backgroundColor: '#f2f2f2'
+    },
+    '& .MuiSvgIcon-root': {
+        marginRight: theme.spacing(1)
+    }
+},
   appBar: {
+    backgroundColor: '#fff',
     zIndex: theme.zIndex.drawer + 1,
     transition: theme.transitions.create(['width', 'margin'], {
       easing: theme.transitions.easing.sharp,
@@ -46,6 +65,7 @@ const useStyles = makeStyles((theme) => ({
   },
   menuButton: {
     marginRight: 36,
+    color:'red'
   },
   hide: {
     display: 'none',
@@ -141,8 +161,9 @@ export default function MiniDrawer() {
    <Router>
         <div className={classes.root}>
       <CssBaseline />
-      <AppBar
+       <AppBar
         position="fixed"
+        
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open,
         })}
@@ -159,11 +180,40 @@ export default function MiniDrawer() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
+
+          {/* <Typography variant="h6" noWrap>
             Mini variant drawer
-          </Typography>
+          </Typography> */}
+            <Grid container
+                    alignItems="center">
+                    <Grid item>
+                        <InputBase
+                            placeholder="Search topics"
+                            className={classes.searchInput}
+                            startAdornment={<SearchIcon fontSize="small" />}
+                        />
+                    </Grid>
+                    <Grid item sm></Grid>
+                    <Grid item>
+                        <IconButton>
+                            <Badge badgeContent={4} color="secondary">
+                                <NotificationsNoneIcon fontSize="small" />
+                            </Badge>
+                        </IconButton>
+                        <IconButton>
+                            <Badge badgeContent={3} color="primary">
+                                <ChatBubbleOutlineIcon fontSize="small" />
+                            </Badge>
+                        </IconButton>
+                        <IconButton>
+                            <PowerSettingsNewIcon fontSize="small" />
+                        </IconButton>
+                    </Grid>
+                </Grid>
+
         </Toolbar>
-      </AppBar>
+      </AppBar> {/**/}
+      {/* <Header /> */}
       <Drawer
         variant="permanent"
         className={clsx(classes.drawer, {

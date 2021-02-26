@@ -9,9 +9,13 @@ import About from './Pages/About';
 function App() {
   return (
     <Switch>
+       <MiniDrawer />
       <Route exact path='/'  component={MiniDrawer}/>
-      <Route path='/homepage' component={Home}/>
-      <Route path='/contact' component={Contact}/>
+      <Route exact path='/homepage' component={Home}/>
+      <Route exact path='/contact' component={Contact}    
+         
+          
+          />
       <Route path='/about' component={About}/>
     </Switch>
   );

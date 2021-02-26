@@ -3,9 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "homepage": "./",
+  "main": "electron/main.js",
   "dependencies": {
+    "@date-io/date-fns": "^1.3.13",
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
+    "@material-ui/pickers": "^3.2.10",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -14,6 +18,7 @@
     "body-parser": "^1.19.0",
     "compression": "^1.7.4",
     "cors": "^2.8.5",
+    "date-fns": "^2.17.0",
     "express": "^4.17.1",
     "express-async-handler": "^1.1.4",
     "helmet": "^4.4.1",
@@ -31,6 +36,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build-electron": "mkdir build/src && robocopy electron build/electron /S & robocopy src/shared build/src/shared /S",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "nodemon": "nodemon ./server.js"

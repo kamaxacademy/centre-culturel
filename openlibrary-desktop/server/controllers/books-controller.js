@@ -1,9 +1,13 @@
 //https://www.npmjs.com/package/node-isbn
 import isbn from 'node-isbn'
-const fs = require("fs");
-const path = require('path');
-const axios = require("axios").default;
-
+// const fs = require("fs");
+import * as fs from'fs';
+import path from 'path';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+// const path = require('path');
+// const axios = require("axios").default;
+import axios from 'axios'
 
 // fileUrl: the absolute url of the image or video you want to download
 // downloadFolder: the path of the downloaded file on your machine
@@ -11,6 +15,9 @@ const downloadFile = async (fileUrl, downloadFolder) => {
   // Get the file name
   const fileName = path.basename(fileUrl);
 
+
+  const __filename = fileURLToPath(import.meta.url);
+  const __dirname = dirname(__filename);
   // The path of the downloaded file on our machine
   const localFilePath = path.resolve(__dirname, downloadFolder, fileName);
   try {

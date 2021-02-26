@@ -5,9 +5,7 @@ import db from '../database.js'
 
 let users = [];
 
-
 //Get all Users in Database
-
 export const getAllUsers = (req, res, next)=>{
     console.log(`Users in the database: ${users}`);
 
