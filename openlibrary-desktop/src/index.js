@@ -6,12 +6,15 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import { Link, Route, BrowserRouter as Router, Switch} from 'react-router-dom'
 import Home from './Pages/Home';
 import MiniDrawer from './component/NavigationDrawer';
-
+import {Provider} from "react-redux";
+import store from './store'
 ReactDOM.render(
-      <Router >
-       
-        <App /> 
 
-      </Router> ,
+  <Provider store={store}>
+    <Router>
+        <App /> 
+      </Router> 
+  </Provider>,
+      
   document.getElementById('root')
 );

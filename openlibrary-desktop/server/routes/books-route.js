@@ -3,7 +3,7 @@ import express from "express"
 
 // Import books-controller
 // const booksRoutes = require('./../controllers/books-controller.js')
-import {getAllBooks} from './../controllers/books-controller.js'
+import {getAllBooks, booksCreate} from './../controllers/books-controller.js'
 
 // Create router
 const router = express.Router()
@@ -17,7 +17,7 @@ router.get('/', getAllBooks)
 // In server.js, books route is specified as '/books'
 // this means that '/create' translates to '/books/create'
 // router.post('/create', booksRoutes.booksCreate)
-
+router.post('/create', booksCreate)
 // Add route for PUT request to delete specific book
 // In server.js, books route is specified as '/books'
 // this means that '/delete' translates to '/books/delete'

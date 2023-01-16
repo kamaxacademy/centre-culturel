@@ -1,62 +1,67 @@
 {
-  "name": "openlibrary",
-  "version": "0.1.0",
-  "private": true,
-  "type": "module",
-  "homepage": "./",
-  "main": "electron/main.js",
-  "dependencies": {
-    "@date-io/date-fns": "^1.3.13",
-    "@material-ui/core": "^4.11.3",
-    "@material-ui/icons": "^4.11.2",
-    "@material-ui/pickers": "^3.2.10",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "axios": "^0.21.1",
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^1.19.0",
-    "compression": "^1.7.4",
-    "cors": "^2.8.5",
-    "date-fns": "^2.17.0",
-    "express": "^4.17.1",
-    "express-async-handler": "^1.1.4",
-    "helmet": "^4.4.1",
-    "node-isbn": "^1.6.0",
-    "node-sass": "^5.0.0",
-    "nodemon": "^2.0.7",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
-    "sqlite3": "^5.0.2",
-    "uuid": "^8.3.2",
-    "web-vitals": "^1.0.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "build-electron": "mkdir build/src && robocopy electron build/electron /S & robocopy src/shared build/src/shared /S",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "nodemon": "nodemon ./server.js"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "name": "openlibrary",
+    "version": "0.1.0",
+    "private": true,
+    "homepage": "./",
+    "main": "electron/main.js",
+    "type": "module",
+    "dependencies": {
+        "@date-io/date-fns": "^1.3.13",
+        "@material-ui/core": "^4.11.3",
+        "@material-ui/icons": "^4.11.2",
+        "@material-ui/lab": "^4.0.0-alpha.57",
+        "@material-ui/pickers": "^3.2.10",
+        "@testing-library/jest-dom": "^5.11.4",
+        "@testing-library/react": "^11.1.0",
+        "@testing-library/user-event": "^12.1.10",
+        "axios": "^0.21.1",
+        "bcryptjs": "^2.4.3",
+        "body-parser": "^1.19.0",
+        "compression": "^1.7.4",
+        "cors": "^2.8.5",
+        "date-fns": "^2.17.0",
+        "express": "^4.17.1",
+        "express-async-handler": "^1.1.4",
+        "helmet": "^4.4.1",
+        "knex": "^0.95.1",
+        "node-isbn": "^1.6.0",
+        "node-sass": "^5.0.0",
+        "nodemon": "^2.0.7",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1",
+        "react-redux": "^7.2.2",
+        "react-router-dom": "^5.2.0",
+        "react-scripts": "4.0.3",
+        "redux": "^4.0.5",
+        "redux-thunk": "^2.3.0",
+        "sqlite3": "^5.0.2",
+        "uuid": "^8.3.2",
+        "web-vitals": "^1.0.1"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "build-electron": "mkdir build/src && robocopy electron build/electron /S & robocopy src/shared build/src/shared /S",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "nodemon": "nodemon ./server.js"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
 }

@@ -9,6 +9,12 @@ import { fileURLToPath } from 'url';
 // const axios = require("axios").default;
 import axios from 'axios'
 
+// import { createRequire } from 'module';
+// const require = createRequire(import.meta.url);
+//  const { where } = require('../db')
+//  const knex = require('../db')
+import knex from 'knex';
+
 // fileUrl: the absolute url of the image or video you want to download
 // downloadFolder: the path of the downloaded file on your machine
 const downloadFile = async (fileUrl, downloadFolder) => {
@@ -72,3 +78,36 @@ export const getAllBooks = (req, res)=>{
 
     
 }
+
+
+
+export const booksCreate = async (req, res) => {
+  // Add new book to database
+   //res.send('Books world')
+   console.log('Books clicked')
+  knex('books')
+    .insert({ // insert new record, a book
+      // 'author': req.body.author,
+      // 'title': req.body.title,
+      // 'pubDate': req.body.pubDate,
+      // 'isbn': req.body.isbn,
+      // 'rating': req.body.rating
+       'author': "Karl",
+      'title':  "Karl",
+      'pubDate':  "Karl",
+      'isbn':  "Karl",
+      'rating':  "Karl"
+       
+    })
+    .then(() => {
+      // Send a success message in response
+      res.json({ message: `Book \'${req.body.title}\' by ${req.body.author} created.` })
+    })
+    .catch(err => {
+      // Send a error message in response
+      res.json({ message: `There was an error creating ${req.body.title} book: ${err}` })
+    })
+ 
+}
+
+

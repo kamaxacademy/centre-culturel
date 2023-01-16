@@ -5,6 +5,7 @@ import {useForm, Form} from '../../component/form/useForm'
 import Controls from '../../component/controls/Controls'
 import * as employeeService from '../../services/employeeService'
 
+
 const genderItems = [
     { id: 'male', title: 'Male' },
     { id: 'female', title: 'Female' },
@@ -23,7 +24,9 @@ const initialFValues = {
     isPermanent: false,
 }
 
-export default function MemberForm() {
+export default function EmployeeForm(props) {
+    const { addOrEdit, recordForEdit } = props
+
     const validate = (fieldValues = values) => {
         let temp = { ...errors }
         if ('fullName' in fieldValues)
@@ -42,25 +45,34 @@ export default function MemberForm() {
             return Object.values(temp).every(x => x == "")
     }
 
-    const { values, setValues, errors, setErrors, handleInputChange, resetForm
+    const {
+        values,
+        setValues,
+        errors,
+        setErrors,
+        handleInputChange,
+        resetForm
     } = useForm(initialFValues, true, validate);
-
-
 
     const handleSubmit = e => {
         e.preventDefault()
-        if (validate()){
-            employeeService.insertEmployee(values)
-            resetForm()
+        if (validate()) {
+            addOrEdit(values, resetForm);
         }
     }
 
-    
+    useEffect(() => {
+        if (recordForEdit != null)
+            setValues({
+                ...recordForEdit
+            })
+    }, [recordForEdit])
+
     return (
-        <Form>
-             <Grid container>
+        <Form onSubmit={handleSubmit}>
+            <Grid container>
                 <Grid item xs={6}>
-                   <Controls.Input
+                    <Controls.Input
                         name="fullName"
                         label="Full Name"
                         value={values.fullName}
@@ -85,10 +97,10 @@ export default function MemberForm() {
                         label="City"
                         name="city"
                         value={values.city}
-                         onChange={handleInputChange}
+                        onChange={handleInputChange}
                     />
 
-              </Grid>
+                </Grid>
                 <Grid item xs={6}>
                     <Controls.RadioGroup
                         name="gender"
@@ -105,17 +117,17 @@ export default function MemberForm() {
                         options={employeeService.getDepartmentCollection()}
                         error={errors.departmentId}
                     />
-                    {/* <Controls.DatePicker
+                    <Controls.DatePicker
                         name="hireDate"
                         label="Hire Date"
                         value={values.hireDate}
                         onChange={handleInputChange}
-                    /> */}
-                        <Controls.Checkbox
+                    />
+                    <Controls.Checkbox
                         name="isPermanent"
                         label="Permanent Employee"
                         value={values.isPermanent}
-                       onChange={handleInputChange}
+                        onChange={handleInputChange}
                     />
 
                     <div>
@@ -125,10 +137,9 @@ export default function MemberForm() {
                         <Controls.Button
                             text="Reset"
                             color="default"
-                            onClick={resetForm} 
-                            />
+                            onClick={resetForm} />
                     </div>
-                </Grid> 
+                </Grid>
             </Grid>
         </Form>
     )

@@ -27,41 +27,45 @@ $grad5: darken($darktan, 4);
 .Home_book {
     height: 200px;
     width: 140px; //metel 40px
-    margin: 10px 10px; //retire sa
+    margin: 10px 70px 20px 10px; //retire sa
     float: left;
-    color: white;
+    //color: white;
     font-size: 0.9em;
     font-family: Verdana, sans-serif;
     margin-bottom: 10px;
     margin-top: 20px;
     transition: transform 0.4s ease;
+    display: flex;
 }
 
 .Home_book-white {
     background-color: white;
     color: black;
-    border-left: 2px solid lighten($darkblue, 4%);
-    border-right: 2px solid darken($darkblue, 4%);
+    //border-left: 2px solid lighten($darkblue, 4%);
+    // border-right: 2px solid darken($darkblue, 4%);
     //9782702124284
     // background-image: url('https://ia801606.us.archive.org/view_archive.php?archive=/19/items/olcovers98/olcovers98-L.zip&file=983129-L.jpg&ext=');
-    background-image: url('http://covers.openlibrary.org/b/isbn/9782702124284-M.jpg');
+    // background-image: url('http://covers.openlibrary.org/b/isbn/9782702124284-M.jpg');
     background-repeat: no-repeat;
     background-size: contain;
 }
 
-// .Home_book h2 {
-//     color: black;
-//     padding: 0;
-//     font-size: 1em;
-//     transform-origin: 0% 0%;
-//     transform: rotate(0.25turn) translateY(-35px);
-//     width: 170px;
-// }
-// .Home_book h3 {
-//     color: black;
-//     padding: 0;
-//     font-size: 1em;
-//     //transform-origin: 0% 0%;
-//     //transform: rotate(0.25turn) translateY(-35px);
-//     width: 170px;
-// }
+.Home_book h2 {
+    color: black;
+    padding: 0;
+    font-size: 1em;
+    // transform-origin: 0% 0%;
+    // transform: rotate(0.25turn) translateY(-35px);
+    width: 70px;
+    margin: 10px;
+}
+
+.Home_book h3 {
+    color: black;
+    padding: 0;
+    font-size: 1em;
+    //transform-origin: 0% 0%;
+    //transform: rotate(0.25turn) translateY(-35px);
+    width: 70px;
+    margin: 10px;
+}
