@@ -90,5 +90,6 @@ Having new features you feel I can add to Gestion-Biblioteque? Kindly contact as
 ## To Do list Templates
 
 - [x] Finish my changes
+- [ ] Need to compare the two last commits to see what changes (before this commit)
 - [ ] Push my commits to GitHub
 - [ ] Open a pull request
